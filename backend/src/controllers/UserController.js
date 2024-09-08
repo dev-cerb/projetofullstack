@@ -11,7 +11,7 @@ const SECRET = process.env.SECRET;
 class UserController{
     async create(req, res){
         try{
-            if(req.params.password = req.params.confirmpass){
+            if(req.body.password == req.body.confirmpass){
                 const newUser = await User.create(req.body);
                 return res.json(newUser)
             }else{

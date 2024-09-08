@@ -16,7 +16,7 @@ export default function Login(){
             console.log(response);
         })
         .catch((e) => {
-            console.log('TESTE');
+            console.log(e);
         })
     }
 

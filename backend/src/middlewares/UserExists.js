@@ -2,9 +2,9 @@ import User from "../models/User.js";
 
 async function UserExists(req,res,next){
     try{
-        const userexists = await User.findAll({
+        const userexists = await User.findOne({
             where:{
-                user: req.params.user,
+                user: req.body.user,
             }
         });
         if(!userexists){
@@ -15,7 +15,7 @@ async function UserExists(req,res,next){
             });
         }
     }catch(e){
-        return res.status(400).json(e.errors.map(err => err.message));
+        return res.status(400).json(e.errors?.map(err => err.message));
     }
 };
 
