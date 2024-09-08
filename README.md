@@ -4,7 +4,7 @@
 
 Este projeto tem por objetivo facilitar a vida cotidiana do usuário, realizando anotações e tarefas a serem realizadas.
 
-## Tecnologias utilizadas:
+### Tecnologias utilizadas:
 
 <ul>
 <li>Javascript</li>
@@ -18,7 +18,7 @@ Este projeto tem por objetivo facilitar a vida cotidiana do usuário, realizando
 <li>Axios</li>
 </ul>
 
-## Rodando o projeto
+### Rodando o projeto
 
 Crie um arquivo .env na raiz do projeto que deve conter as seguintes informações:
 
