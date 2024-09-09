@@ -26,10 +26,10 @@ class UserController{
 
     async login(req, res){
         try{
-            const user = await User.findAll({
+            const user = await User.findOne({
                 where: {
-                    user: req.params.user,
-                    password: req.params.password,
+                    user: req.body.user,
+                    password: req.body.password,
                 }
             });
             if(user){
@@ -91,7 +91,7 @@ class UserController{
 
             await User.destroy({
                 where: {
-                    id: req.param.id,
+                    id: req.params.id,
                 }
             });
 
@@ -99,6 +99,7 @@ class UserController{
                 message: ['Usuário excluido.'],
             });
         }catch(e){
+            console.log(e);
             return res.json(null);
         }
     }
