@@ -1,7 +1,6 @@
 'use client';
 
 import axios from "axios";
-import { redirect } from "next/navigation";
 import { url } from "@/config/config";
 
 
@@ -12,7 +11,7 @@ import LabelForm from "@/app/components/labelForm"
 export default function Login(){
 
     function Teste(){
-        axios.post(`http://localhost:3001/pages/user/register`, {
+        axios.post(`${url}/pages/user/register`, {
                 nome: 'TesteFinal',
                 user: 'y',
                 password: '200',
