@@ -3,5 +3,5 @@ require('dotenv').config({
 });
 
 module.exports = {
-  url: `https://${process.env.BASE_URL}:${process.env.SERVER_PORT}`,
+  url: `http://${process.env.BASE_URL}:${process.env.SERVER_PORT}`,
 };

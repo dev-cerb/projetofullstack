@@ -11,7 +11,7 @@ async function UserExists(req,res,next){
             next();
         }else{
             return res.json({
-                error: ['Usuário já existe'],
+                message: ['Usuário já existe'],
             });
         }
     }catch(e){

@@ -12,11 +12,11 @@ class UserController{
     async create(req, res){
         try{
             if(req.body.password == req.body.confirmpass){
-                const newUser = await User.create(req.body);
-                return res.json(newUser)
+                await User.create(req.body);
+                return res.json({message:['Usuário criado.']})
             }else{
                 return res.json({
-                    error: ['As senhas não estão de acordo.']
+                    message: ['As senhas não estão de acordo.']
                 })
             }
         }catch(e){
@@ -37,7 +37,7 @@ class UserController{
                 return res.json({auth: true, token});
             }else{
                 return res.json({
-                    error: ['Usuário não existe ou senha incorreta.']
+                    message: ['Usuário não existe ou senha incorreta.']
                 })
             }
         }catch(e){
@@ -49,7 +49,7 @@ class UserController{
         try{
             if(!req.params.id){
                 return res.status(400).json({
-                    erros: ['Id não enviado.'],
+                    message: ['Id não enviado.'],
                 })
             }
 
@@ -57,7 +57,7 @@ class UserController{
 
             if(!user){
                 return res.status(400).json({
-                    errors: ['Usuário não existe.'],
+                    message: ['Usuário não existe.'],
                 })
             }
 
@@ -77,7 +77,7 @@ class UserController{
         try{
             if(!req.params.id){
                 return res.status(400).json({
-                    errors: ['ID do Usuário não enviado.'],
+                    message: ['ID do Usuário não enviado.'],
                 });
             }
 
@@ -85,7 +85,7 @@ class UserController{
 
             if(!user){
                 return res.status(400).jsn({
-                    errors: ['Usuário não existe']
+                    message: ['Usuário não existe']
                 });
             }
 
