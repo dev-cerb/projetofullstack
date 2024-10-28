@@ -42,4 +42,4 @@ Após isso, realizar o comando "npx sequelize-cli db:migrate" para realizar a mi
 
 Para rodar o servidor, entre na pasta backend e utilize npm run dev
 
-Para rodar o frontend, entre na pasta frontend e utilize npm run dev
+Para rodar o frontend, entre na pasta frontend/my-app e utilize npm run dev
